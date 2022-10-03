@@ -1,0 +1,32 @@
+body header {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+body header form {
+  margin: 1rem 0;
+}
+body header form .searchBar {
+  border-radius: 15px;
+  padding: 0 7px;
+}
+body main {
+  margin: 0 1rem;
+}
+body main .fact {
+  border: 2px solid black;
+  margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 481px) {
+  body main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body main {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */
