@@ -7,8 +7,11 @@ export const keyPressFunc = async(allFactsData) => {
     const searchBar = document.querySelector(".searchBar")
     
     searchBar.onkeypress = async(e) => {
+        if(e.key === "Enter"){
+            e.preventDefault();
+            return searchBar.value = "";
+        }
         e.stopImmediatePropagation();
-        if(e.key === "Enter"){searchBar.value = ""}
         deleteFactsFunc();
         const oldInputValue = searchBar.value
         const currInputValue = oldInputValue + e.key;
